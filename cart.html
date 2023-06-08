@@ -5,6 +5,22 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+  <title>Current Spaces</title>
+  <script type="module" src="assets/js/model-viewer.min.js"></script>
+  <style>
+    model-viewer{
+      width: auto;
+      height: 500px;
+      margin: none;
+    }
+  </style>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <link href="assets/css/cart.css" rel="stylesheet">
+
   <title>HomeAway</title>
   <script type="module" src="assets/js/model-viewer.min.js"></script>
   <style>
@@ -33,7 +49,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/cart.css" rel="stylesheet">
 
   
 </head>
@@ -65,12 +81,12 @@
   
         <nav id="navbar" class="navbar">
           <ul>
-            <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
             <li><a class="nav-link scrollto" href="#about">About</a></li>
             <!--li><a class="nav-link scrollto" href="#services">Services</a></li-->
-            <li><a class="nav-link scrollto" href="product.html">Products</a></li>
-            <!--li><a class="nav-link scrollto" href="#team">Team</a></li-->
-            <li class="dropdown"><a href="#"><span>How it Works</span> <i class="bi bi-chevron-down"></i></a>
+            <li><a class="nav-link scrollto " href="product.html">Products</a></li>
+           
+            <li class="dropdown"><a href="#"><span>How it working bro NOW hehe new shet dawg</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
                 <li><a href="#">Drop Down 1</a></li>
                 <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
@@ -88,24 +104,14 @@
               </ul>
             </li>
             <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-            <li><a class="nav-link scrollto active" href="cart.html">Bookings</a></li>
+            <li><a class="nav-link scrollto" href="cart.html">Bookings</a></li-->
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
   
       </div>
     </header><!-- End Header -->
-    
-    <div class="col-lg-4">
-      <div class="portfolio-info">
-        <h3>Shoe Cabinet</h3>
-        <ul>
-          <li><strong>Category</strong>: Furniture</li>
-          <li><strong>Brand</strong>: Ikpati</li>
-          <li><strong>Price</strong>: ₦6,999</li>
-          <!--li><strong>Project URL</strong>: <a href="#">www.example.com</a></li-->
-        </ul>
-      </div>
+   
 
        <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter.js"></script>
@@ -120,4 +126,52 @@
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
   
+    <form action="reservation.php" method="post">
+      <div class ="cart">
+      <div class="elem-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+      </div>
+      <div class="elem-group">
+        <label for="email">Your E-mail</label>
+        <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+      </div>
+      <div class="elem-group">
+        <label for="phone">Your Phone</label>
+        <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+      </div>
+      <hr>
+      <div class="elem-group inlined">
+        <label for="adult">Adults</label>
+        <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+      </div>
+      <div class="elem-group inlined">
+        <label for="child">Children</label>
+        <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+      </div>
+      <div class="elem-group inlined">
+        <label for="checkin-date">Check-in Date</label>
+        <input type="date" id="checkin-date" name="checkin" required>
+      </div>
+      <div class="elem-group inlined">
+        <label for="checkout-date">Check-out Date</label>
+        <input type="date" id="checkout-date" name="checkout" required>
+      </div>
+      <div class="elem-group">
+        <label for="room-selection">Select Room Preference</label>
+        <select id="room-selection" name="room_preference" required>
+            <option value="">Choose a Room from the List</option>
+            <option value="connecting">Connecting</option>
+            <option value="adjoining">Adjoining</option>
+            <option value="adjacent">Adjacent</option>
+        </select>
+      </div>
+      <hr>
+      <div class="elem-group">
+        <label for="message">Anything Else?</label>
+        <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+      </div>
+      <button type="submit">Book The Rooms</button>
+    </form>
+  </div>
 </body>
