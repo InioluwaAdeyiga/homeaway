@@ -30,7 +30,7 @@ a {
 }
 
 a:hover {
-  color: #6bc28c;
+  color: #04AA6D;
   text-decoration: none;
 }
 
@@ -2255,7 +2255,7 @@ label {
 }
 
 .btn:hover {
-  background-color: #45a049;
+  background-color: #04AA6D;
 }
 
 span.price {
@@ -2307,13 +2307,13 @@ span.price {
   
   opacity: 1;
   
-  border: 1px solid #559092;
+  border: 1px solid #04AA6D;
   
 }
   
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
   
-  background-color: #559092;
+  background-color: #04AA6D;
   
 }
   
